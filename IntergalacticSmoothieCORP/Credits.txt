@@ -1,0 +1,9 @@
+This file lists credits of people who contributed to this project
+Programming: Manuel Fluss
+Pixel-Art: Stephen Warner
+
+
+
+Global function: "areDictsEqual()" credit goes to reddit user kleonc for this function
+Modern UI SFX pack: Andrea Baroni
+Kenney's Godot ThemePack: Kenney

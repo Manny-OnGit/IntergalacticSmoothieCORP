@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Success4.wav-c3be53a741369d3a733e204cf3358037.sample"
+
+[deps]
+
+source_file="res://StephenAssets/Sounds/Success4.wav"
+dest_files=[ "res://.import/Success4.wav-c3be53a741369d3a733e204cf3358037.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

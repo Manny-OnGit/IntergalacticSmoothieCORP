@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://StephenAssets/UI9Patches/TranslucentBackground/Blue UI 2.png" type="Texture" id=1]
+[ext_resource path="res://Theme/KenneyBlackText.tres" type="Theme" id=2]
+[ext_resource path="res://StephenAssets/misc/Clock.png" type="Texture" id=3]
+[ext_resource path="res://StephenAssets/misc/Dollar.png" type="Texture" id=4]
+[ext_resource path="res://MainScene/MoneyAndTimer/MoneyAndTimer.gd" type="Script" id=5]
+
+[node name="Control" type="NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -280.0
+margin_bottom = -150.0
+rect_min_size = Vector2( 40, 30 )
+theme = ExtResource( 2 )
+texture = ExtResource( 1 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 38.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 36, 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 36.0
+margin_bottom = 26.0
+
+[node name="MoneyBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 36.0
+margin_bottom = 9.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MoneyBar"]
+margin_right = 6.0
+margin_bottom = 9.0
+
+[node name="MoneyLabel" type="Label" parent="MarginContainer/VBoxContainer/MoneyBar/MarginContainer"]
+margin_right = 6.0
+margin_bottom = 9.0
+text = "0"
+
+[node name="Sprite" type="Sprite" parent="MarginContainer/VBoxContainer/MoneyBar"]
+position = Vector2( 25.875, 19.875 )
+texture = ExtResource( 4 )
+
+[node name="TimerBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 13.0
+margin_right = 36.0
+margin_bottom = 22.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TimerBar"]
+margin_right = 6.0
+margin_bottom = 9.0
+
+[node name="TimerLabel" type="Label" parent="MarginContainer/VBoxContainer/TimerBar/MarginContainer"]
+margin_right = 6.0
+margin_bottom = 9.0
+text = "0"
+
+[node name="Sprite" type="Sprite" parent="MarginContainer/VBoxContainer/TimerBar"]
+position = Vector2( 31.75, -8.125 )
+texture = ExtResource( 3 )

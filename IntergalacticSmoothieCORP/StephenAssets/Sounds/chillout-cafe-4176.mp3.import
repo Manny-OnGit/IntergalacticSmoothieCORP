@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chillout-cafe-4176.mp3-23e9e918011cba65c9ce65c911d22b2f.mp3str"
+
+[deps]
+
+source_file="res://StephenAssets/Sounds/chillout-cafe-4176.mp3"
+dest_files=[ "res://.import/chillout-cafe-4176.mp3-23e9e918011cba65c9ce65c911d22b2f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,816 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Theme/KenneyBlackText.tres" type="Theme" id=1]
+[ext_resource path="res://StephenAssets/UI9Patches/Pink UI.png" type="Texture" id=2]
+[ext_resource path="res://StephenAssets/UI9Patches/Green UI.png" type="Texture" id=3]
+[ext_resource path="res://StephenAssets/Buttons/Smaller Button/Small button unpressed.png" type="Texture" id=4]
+[ext_resource path="res://StephenAssets/Buttons/Smaller Button/Small button pressed.png" type="Texture" id=5]
+[ext_resource path="res://StephenAssets/Buttons/Smaller Button/Small button x.png" type="Texture" id=6]
+[ext_resource path="res://Theme/small_font.tres" type="Theme" id=7]
+[ext_resource path="res://UI scenes/Item.gd" type="Script" id=8]
+[ext_resource path="res://StephenAssets/UI9Patches/White UI.png" type="Texture" id=9]
+[ext_resource path="res://MainScene/ShopTab/Shop.gd" type="Script" id=10]
+[ext_resource path="res://Ingredients/Protein Powder.png" type="Texture" id=11]
+[ext_resource path="res://Ingredients/Rock.png" type="Texture" id=12]
+[ext_resource path="res://Ingredients/Stardust.png" type="Texture" id=13]
+[ext_resource path="res://Ingredients/Carbon dioxide.png" type="Texture" id=14]
+[ext_resource path="res://StephenAssets/Buttons/TinyButton/Tiny button pressed.png" type="Texture" id=15]
+[ext_resource path="res://Ingredients/Bugs.png" type="Texture" id=16]
+[ext_resource path="res://StephenAssets/Buttons/TinyButton/Tiny button unpressed.png" type="Texture" id=17]
+[ext_resource path="res://Ingredients/Melon.png" type="Texture" id=18]
+[ext_resource path="res://Ingredients/Milk.png" type="Texture" id=19]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="ShopTab" type="NinePatchRect"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 300, 160 )
+theme = ExtResource( 1 )
+texture = ExtResource( 2 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EntireShop" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 290.0
+margin_bottom = 150.0
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop"]
+margin_right = 290.0
+margin_bottom = 9.0
+text = "shop"
+align = 1
+
+[node name="BlenderRow" type="HBoxContainer" parent="MarginContainer/EntireShop"]
+margin_top = 13.0
+margin_right = 290.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 290, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/EntireShop/BlenderRow"]
+margin_right = 73.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/BlenderRow/MarginContainer"]
+margin_top = 8.0
+margin_right = 73.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 73, 0 )
+text = "extra blender"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/BlenderRow"]
+margin_left = 77.0
+margin_right = 277.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 200, 25 )
+texture = ExtResource( 3 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/EntireShop/BlenderRow/NinePatchRect"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 198.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/EntireShop/BlenderRow/NinePatchRect/MarginContainer"]
+margin_right = 196.0
+margin_bottom = 22.0
+
+[node name="PurchaseBlender1" type="TextureButton" parent="MarginContainer/EntireShop/BlenderRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_right = 30.0
+margin_bottom = 22.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/EntireShop/BlenderRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 34.0
+margin_right = 56.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+text = "50
+"
+
+[node name="PurchaseBlender2" type="TextureButton" parent="MarginContainer/EntireShop/BlenderRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 60.0
+margin_right = 90.0
+margin_bottom = 22.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+stretch_mode = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/EntireShop/BlenderRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 94.0
+margin_right = 116.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+text = "50
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/EntireShop/BlenderRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 120.0
+margin_right = 195.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 75, 22 )
+theme = ExtResource( 7 )
+text = "This gives you extra blenders in the blender tab"
+scroll_active = false
+
+[node name="ParkingRow" type="HBoxContainer" parent="MarginContainer/EntireShop"]
+margin_top = 42.0
+margin_right = 290.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 290, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/EntireShop/ParkingRow"]
+margin_right = 73.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/ParkingRow/MarginContainer"]
+margin_top = 8.0
+margin_right = 73.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 73, 0 )
+text = "extra parking  "
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/ParkingRow"]
+margin_left = 77.0
+margin_right = 277.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 200, 25 )
+texture = ExtResource( 3 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/EntireShop/ParkingRow/NinePatchRect"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 198.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/EntireShop/ParkingRow/NinePatchRect/MarginContainer"]
+margin_right = 196.0
+margin_bottom = 22.0
+
+[node name="PurchaseParking1" type="TextureButton" parent="MarginContainer/EntireShop/ParkingRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_right = 30.0
+margin_bottom = 22.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/EntireShop/ParkingRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 34.0
+margin_right = 56.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+text = "25"
+
+[node name="PurchaseParking2" type="TextureButton" parent="MarginContainer/EntireShop/ParkingRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 60.0
+margin_right = 90.0
+margin_bottom = 22.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+stretch_mode = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/EntireShop/ParkingRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 94.0
+margin_right = 116.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+text = "25
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/EntireShop/ParkingRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 120.0
+margin_right = 195.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 75, 22 )
+theme = ExtResource( 7 )
+text = "This will allow more customers in the front area"
+scroll_active = false
+
+[node name="AdvertRow" type="HBoxContainer" parent="MarginContainer/EntireShop"]
+margin_top = 71.0
+margin_right = 290.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 290, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/EntireShop/AdvertRow"]
+margin_right = 73.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/AdvertRow/MarginContainer"]
+margin_top = 8.0
+margin_right = 73.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 73, 0 )
+text = "purchase ads  "
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/AdvertRow"]
+margin_left = 77.0
+margin_right = 277.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 200, 25 )
+texture = ExtResource( 3 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/EntireShop/AdvertRow/NinePatchRect"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 198.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/EntireShop/AdvertRow/NinePatchRect/MarginContainer"]
+margin_right = 196.0
+margin_bottom = 22.0
+alignment = 1
+
+[node name="PurchaseAds1" type="TextureButton" parent="MarginContainer/EntireShop/AdvertRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 30.0
+margin_right = 60.0
+margin_bottom = 22.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/EntireShop/AdvertRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 64.0
+margin_right = 86.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+text = "10
+"
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/EntireShop/AdvertRow/NinePatchRect/MarginContainer/HBoxContainer"]
+margin_left = 90.0
+margin_right = 165.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 75, 22 )
+theme = ExtResource( 7 )
+text = "invest in ads to attract more customers"
+scroll_active = false
+
+[node name="PurchaseIngredients" type="HBoxContainer" parent="MarginContainer/EntireShop"]
+margin_top = 100.0
+margin_right = 290.0
+margin_bottom = 150.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/EntireShop/PurchaseIngredients"]
+margin_right = 73.0
+margin_bottom = 50.0
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/PurchaseIngredients/MarginContainer"]
+margin_right = 73.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 73, 50 )
+text = "Purchase 
+ingredients:
+(1 each)"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/PurchaseIngredients"]
+margin_left = 77.0
+margin_right = 277.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+texture = ExtResource( 3 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 3.0
+margin_right = -3.0
+margin_bottom = -3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IngredientContainer" type="GridContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer"]
+margin_right = 194.0
+margin_bottom = 44.0
+columns = 7
+
+[node name="Slot1" type="VBoxContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer"]
+margin_right = 20.0
+margin_bottom = 44.0
+
+[node name="PurchaseSlot1" type="Control" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot1"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+theme = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot1/PurchaseSlot1"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 9 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot1/PurchaseSlot1/NinePatchRect"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot1/PurchaseSlot1/NinePatchRect"]
+margin_left = 2.52553
+margin_top = 17.1902
+margin_right = 42.5255
+margin_bottom = 31.1902
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisiionArea" type="Area2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot1/PurchaseSlot1" groups=[
+"ItemSlot",
+]]
+position = Vector2( -3.35876, -3.53553 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot1/PurchaseSlot1/CollisiionArea" groups=[
+"ItemSlot",
+]]
+position = Vector2( 13, 14 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="PurchaseItem1" type="TextureButton" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot1"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+
+[node name="Slot2" type="VBoxContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer"]
+margin_left = 24.0
+margin_right = 44.0
+margin_bottom = 44.0
+
+[node name="PurchaseSlot1" type="Control" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot2"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+theme = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot2/PurchaseSlot1"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 9 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot2/PurchaseSlot1/NinePatchRect"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot2/PurchaseSlot1/NinePatchRect"]
+margin_left = 2.52553
+margin_top = 17.1902
+margin_right = 42.5255
+margin_bottom = 31.1902
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisiionArea" type="Area2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot2/PurchaseSlot1" groups=[
+"ItemSlot",
+]]
+position = Vector2( -3.35876, -3.53553 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot2/PurchaseSlot1/CollisiionArea" groups=[
+"ItemSlot",
+]]
+position = Vector2( 13, 14 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="PurchaseItem2" type="TextureButton" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot2"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+
+[node name="Slot3" type="VBoxContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer"]
+margin_left = 48.0
+margin_right = 68.0
+margin_bottom = 44.0
+
+[node name="PurchaseSlot1" type="Control" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot3"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+theme = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot3/PurchaseSlot1"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 9 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot3/PurchaseSlot1/NinePatchRect"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 18 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot3/PurchaseSlot1/NinePatchRect"]
+margin_left = 2.52553
+margin_top = 17.1902
+margin_right = 42.5255
+margin_bottom = 31.1902
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisiionArea" type="Area2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot3/PurchaseSlot1" groups=[
+"ItemSlot",
+]]
+position = Vector2( -3.35876, -3.53553 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot3/PurchaseSlot1/CollisiionArea" groups=[
+"ItemSlot",
+]]
+position = Vector2( 13, 14 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="PurchaseItem3" type="TextureButton" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot3"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+
+[node name="Slot4" type="VBoxContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer"]
+margin_left = 72.0
+margin_right = 92.0
+margin_bottom = 44.0
+
+[node name="PurchaseSlot1" type="Control" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot4"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+theme = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot4/PurchaseSlot1"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 9 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot4/PurchaseSlot1/NinePatchRect"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot4/PurchaseSlot1/NinePatchRect"]
+margin_left = 2.52553
+margin_top = 17.1902
+margin_right = 42.5255
+margin_bottom = 31.1902
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisiionArea" type="Area2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot4/PurchaseSlot1" groups=[
+"ItemSlot",
+]]
+position = Vector2( -3.35876, -3.53553 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot4/PurchaseSlot1/CollisiionArea" groups=[
+"ItemSlot",
+]]
+position = Vector2( 13, 14 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="PurchaseItem4" type="TextureButton" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot4"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+
+[node name="Slot5" type="VBoxContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer"]
+margin_left = 96.0
+margin_right = 116.0
+margin_bottom = 44.0
+
+[node name="PurchaseSlot1" type="Control" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot5"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+theme = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot5/PurchaseSlot1"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 9 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot5/PurchaseSlot1/NinePatchRect"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot5/PurchaseSlot1/NinePatchRect"]
+margin_left = 2.52553
+margin_top = 17.1902
+margin_right = 42.5255
+margin_bottom = 31.1902
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisiionArea" type="Area2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot5/PurchaseSlot1" groups=[
+"ItemSlot",
+]]
+position = Vector2( -3.35876, -3.53553 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot5/PurchaseSlot1/CollisiionArea" groups=[
+"ItemSlot",
+]]
+position = Vector2( 13, 14 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="PurchaseItem5" type="TextureButton" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot5"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+
+[node name="Slot6" type="VBoxContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer"]
+margin_left = 120.0
+margin_right = 140.0
+margin_bottom = 44.0
+
+[node name="PurchaseSlot1" type="Control" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot6"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+theme = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot6/PurchaseSlot1"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 9 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot6/PurchaseSlot1/NinePatchRect"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot6/PurchaseSlot1/NinePatchRect"]
+margin_left = 2.52553
+margin_top = 17.1902
+margin_right = 42.5255
+margin_bottom = 31.1902
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisiionArea" type="Area2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot6/PurchaseSlot1" groups=[
+"ItemSlot",
+]]
+position = Vector2( -3.35876, -3.53553 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot6/PurchaseSlot1/CollisiionArea" groups=[
+"ItemSlot",
+]]
+position = Vector2( 13, 14 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="PurchaseItem6" type="TextureButton" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot6"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+
+[node name="Slot7" type="VBoxContainer" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer"]
+margin_left = 144.0
+margin_right = 164.0
+margin_bottom = 44.0
+
+[node name="PurchaseSlot1" type="Control" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot7"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+theme = ExtResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot7/PurchaseSlot1"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 9 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot7/PurchaseSlot1/NinePatchRect"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot7/PurchaseSlot1/NinePatchRect"]
+margin_left = 2.52553
+margin_top = 17.1902
+margin_right = 42.5255
+margin_bottom = 31.1902
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisiionArea" type="Area2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot7/PurchaseSlot1" groups=[
+"ItemSlot",
+]]
+position = Vector2( -3.35876, -3.53553 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot7/PurchaseSlot1/CollisiionArea" groups=[
+"ItemSlot",
+]]
+position = Vector2( 13, 14 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="PurchaseItem7" type="TextureButton" parent="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot7"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+
+[connection signal="pressed" from="MarginContainer/EntireShop/BlenderRow/NinePatchRect/MarginContainer/HBoxContainer/PurchaseBlender1" to="." method="_on_PurchaseBlender1_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/BlenderRow/NinePatchRect/MarginContainer/HBoxContainer/PurchaseBlender2" to="." method="_on_PurchaseBlender2_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/ParkingRow/NinePatchRect/MarginContainer/HBoxContainer/PurchaseParking1" to="." method="_on_PurchaseParking1_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/ParkingRow/NinePatchRect/MarginContainer/HBoxContainer/PurchaseParking2" to="." method="_on_PurchaseParking2_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/AdvertRow/NinePatchRect/MarginContainer/HBoxContainer/PurchaseAds1" to="." method="_on_PurchaseAds1_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot1/PurchaseItem1" to="." method="_on_PurchaseItem1_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot2/PurchaseItem2" to="." method="_on_PurchaseItem2_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot3/PurchaseItem3" to="." method="_on_PurchaseItem3_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot4/PurchaseItem4" to="." method="_on_PurchaseItem4_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot5/PurchaseItem5" to="." method="_on_PurchaseItem5_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot6/PurchaseItem6" to="." method="_on_PurchaseItem6_pressed"]
+[connection signal="pressed" from="MarginContainer/EntireShop/PurchaseIngredients/NinePatchRect/MarginContainer/IngredientContainer/Slot7/PurchaseItem7" to="." method="_on_PurchaseItem7_pressed"]

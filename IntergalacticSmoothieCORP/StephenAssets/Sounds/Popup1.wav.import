@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Popup1.wav-f09a3dc2a83a4d04c45caef66fcd88fd.sample"
+
+[deps]
+
+source_file="res://StephenAssets/Sounds/Popup1.wav"
+dest_files=[ "res://.import/Popup1.wav-f09a3dc2a83a4d04c45caef66fcd88fd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

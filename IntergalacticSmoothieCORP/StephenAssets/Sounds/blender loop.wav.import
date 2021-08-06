@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/blender loop.wav-8c7bb518baeb4dcc1ff736592e9449e2.sample"
+
+[deps]
+
+source_file="res://StephenAssets/Sounds/blender loop.wav"
+dest_files=[ "res://.import/blender loop.wav-8c7bb518baeb4dcc1ff736592e9449e2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

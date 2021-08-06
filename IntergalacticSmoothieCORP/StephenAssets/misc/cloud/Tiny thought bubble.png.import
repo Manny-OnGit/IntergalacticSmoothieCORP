@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Tiny thought bubble.png-a4a6ac03c0d0ca3561f71e246e6b4ead.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://StephenAssets/misc/cloud/Tiny thought bubble.png"
+dest_files=[ "res://.import/Tiny thought bubble.png-a4a6ac03c0d0ca3561f71e246e6b4ead.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

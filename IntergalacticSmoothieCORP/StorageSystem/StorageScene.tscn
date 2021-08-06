@@ -1,0 +1,249 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://StephenAssets/UI9Patches/TranslucentBackground/Blue UI 2.png" type="Texture" id=1]
+[ext_resource path="res://Theme/kenneyUI-blue.tres" type="Theme" id=2]
+[ext_resource path="res://UI scenes/ItemSlot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://StorageSystem/StorageScene.gd" type="Script" id=4]
+
+[node name="StoragePanel" type="NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -20.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 300, 160 )
+theme = ExtResource( 2 )
+texture = ExtResource( 1 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 10
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 5.0
+margin_right = -7.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 286.0
+margin_bottom = 151.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="Label" parent="MarginContainer/Body"]
+margin_right = 286.0
+margin_bottom = 18.0
+text = "Storage"
+align = 1
+
+[node name="ItemContainer" type="GridContainer" parent="MarginContainer/Body"]
+margin_top = 22.0
+margin_right = 286.0
+margin_bottom = 134.0
+columns = 10
+
+[node name="ItemSlot1" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_right = 25.0
+margin_bottom = 25.0
+
+[node name="ItemSlot2" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 29.0
+margin_right = 54.0
+margin_bottom = 25.0
+
+[node name="ItemSlot3" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 58.0
+margin_right = 83.0
+margin_bottom = 25.0
+
+[node name="ItemSlot4" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 87.0
+margin_right = 112.0
+margin_bottom = 25.0
+
+[node name="ItemSlot5" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 116.0
+margin_right = 141.0
+margin_bottom = 25.0
+
+[node name="ItemSlot6" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 145.0
+margin_right = 170.0
+margin_bottom = 25.0
+
+[node name="ItemSlot7" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 174.0
+margin_right = 199.0
+margin_bottom = 25.0
+
+[node name="ItemSlot8" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 203.0
+margin_right = 228.0
+margin_bottom = 25.0
+
+[node name="ItemSlot9" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 232.0
+margin_right = 257.0
+margin_bottom = 25.0
+
+[node name="ItemSlot10" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 261.0
+margin_right = 286.0
+margin_bottom = 25.0
+
+[node name="ItemSlot11" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_top = 29.0
+margin_right = 25.0
+margin_bottom = 54.0
+
+[node name="ItemSlot12" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 29.0
+margin_top = 29.0
+margin_right = 54.0
+margin_bottom = 54.0
+
+[node name="ItemSlot13" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 58.0
+margin_top = 29.0
+margin_right = 83.0
+margin_bottom = 54.0
+
+[node name="ItemSlot14" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 87.0
+margin_top = 29.0
+margin_right = 112.0
+margin_bottom = 54.0
+
+[node name="ItemSlot15" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 116.0
+margin_top = 29.0
+margin_right = 141.0
+margin_bottom = 54.0
+
+[node name="ItemSlot16" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 145.0
+margin_top = 29.0
+margin_right = 170.0
+margin_bottom = 54.0
+
+[node name="ItemSlot17" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 174.0
+margin_top = 29.0
+margin_right = 199.0
+margin_bottom = 54.0
+
+[node name="ItemSlot18" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 203.0
+margin_top = 29.0
+margin_right = 228.0
+margin_bottom = 54.0
+
+[node name="ItemSlot19" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 232.0
+margin_top = 29.0
+margin_right = 257.0
+margin_bottom = 54.0
+
+[node name="ItemSlot20" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 261.0
+margin_top = 29.0
+margin_right = 286.0
+margin_bottom = 54.0
+
+[node name="ItemSlot21" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_top = 58.0
+margin_right = 25.0
+margin_bottom = 83.0
+
+[node name="ItemSlot22" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 29.0
+margin_top = 58.0
+margin_right = 54.0
+margin_bottom = 83.0
+
+[node name="ItemSlot23" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 58.0
+margin_top = 58.0
+margin_right = 83.0
+margin_bottom = 83.0
+
+[node name="ItemSlot24" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 87.0
+margin_top = 58.0
+margin_right = 112.0
+margin_bottom = 83.0
+
+[node name="ItemSlot25" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 116.0
+margin_top = 58.0
+margin_right = 141.0
+margin_bottom = 83.0
+
+[node name="ItemSlot26" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 145.0
+margin_top = 58.0
+margin_right = 170.0
+margin_bottom = 83.0
+
+[node name="ItemSlot27" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 174.0
+margin_top = 58.0
+margin_right = 199.0
+margin_bottom = 83.0
+
+[node name="ItemSlot28" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 203.0
+margin_top = 58.0
+margin_right = 228.0
+margin_bottom = 83.0
+
+[node name="ItemSlot29" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 232.0
+margin_top = 58.0
+margin_right = 257.0
+margin_bottom = 83.0
+
+[node name="ItemSlot30" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 261.0
+margin_top = 58.0
+margin_right = 286.0
+margin_bottom = 83.0
+
+[node name="ItemSlot31" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_top = 87.0
+margin_right = 25.0
+margin_bottom = 112.0
+
+[node name="ItemSlot32" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 29.0
+margin_top = 87.0
+margin_right = 54.0
+margin_bottom = 112.0
+
+[node name="ItemSlot33" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 58.0
+margin_top = 87.0
+margin_right = 83.0
+margin_bottom = 112.0
+
+[node name="ItemSlot34" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 87.0
+margin_top = 87.0
+margin_right = 112.0
+margin_bottom = 112.0
+
+[node name="ItemSlot35" parent="MarginContainer/Body/ItemContainer" instance=ExtResource( 3 )]
+margin_left = 116.0
+margin_top = 87.0
+margin_right = 141.0
+margin_bottom = 112.0

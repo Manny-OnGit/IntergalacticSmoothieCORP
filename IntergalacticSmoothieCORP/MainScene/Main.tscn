@@ -1,0 +1,231 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://StorageSystem/StorageScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI scenes/InventoryBar/InventoryBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MainScene/Holder/mouseObject.tscn" type="PackedScene" id=3]
+[ext_resource path="res://StephenAssets/Buttons/Arrows/Arrow Pressed.png" type="Texture" id=4]
+[ext_resource path="res://MainScene/MainCamera.gd" type="Script" id=5]
+[ext_resource path="res://MainScene/Blender/BlenderTab/BlenderTab.tscn" type="PackedScene" id=6]
+[ext_resource path="res://StephenAssets/Scenery/Fire.png" type="Texture" id=7]
+[ext_resource path="res://StephenAssets/Scenery/Restaraunt.png" type="Texture" id=8]
+[ext_resource path="res://StephenAssets/Scenery/Space.png" type="Texture" id=9]
+[ext_resource path="res://MainScene/Customers/ParkingArea/ParkingQueue.tscn" type="PackedScene" id=10]
+[ext_resource path="res://MainScene/MoneyAndTimer/MoneyAndTimer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://StephenAssets/Buttons/Arrows/Arrow Unhovered.png" type="Texture" id=12]
+[ext_resource path="res://StephenAssets/Buttons/Arrows/Arrow Hovered.png" type="Texture" id=13]
+[ext_resource path="res://MainScene/ShopTab/Shop.tscn" type="PackedScene" id=14]
+[ext_resource path="res://MainScene/CombinationTable/CombinationTable.tscn" type="PackedScene" id=15]
+[ext_resource path="res://MainScene/Background.gd" type="Script" id=16]
+[ext_resource path="res://MainScene/ScoreCounter/ScoreCounter.tscn" type="PackedScene" id=17]
+[ext_resource path="res://MainScene/FinalScoreTab/FinalScore.tscn" type="PackedScene" id=18]
+[ext_resource path="res://MainScene/Main.gd" type="Script" id=19]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Floating"
+length = 7.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.5, 7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 160, 50 ), Vector2( 160, 52 ), Vector2( 160, 50 ) ]
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 19 )
+
+[node name="Mouse" parent="." instance=ExtResource( 3 )]
+position = Vector2( 38.0429, 83.4275 )
+
+[node name="MainCamera" type="Camera2D" parent="."]
+z_index = 5
+anchor_mode = 0
+current = true
+script = ExtResource( 5 )
+
+[node name="Control" type="Control" parent="MainCamera"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 320, 180 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryBar" parent="MainCamera/Control" instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_top = 1.0
+margin_left = -150.0
+margin_top = -40.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="Down" type="TextureButton" parent="MainCamera/Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -7.5
+margin_top = -15.0
+margin_right = 7.5
+rect_min_size = Vector2( 15, 15 )
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 7.5, 7.5 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up" type="TextureButton" parent="MainCamera/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -7.5
+margin_right = 7.5
+margin_bottom = 15.0
+rect_min_size = Vector2( 15, 15 )
+rect_pivot_offset = Vector2( 7.5, 7.5 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="TextureButton" parent="MainCamera/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.5
+margin_right = 15.0
+margin_bottom = 7.5
+rect_min_size = Vector2( 15, 15 )
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 7.5, 7.5 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="TextureButton" parent="MainCamera/Control"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -15.0
+margin_top = -7.5
+margin_bottom = 7.5
+rect_min_size = Vector2( 15, 15 )
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 7.5, 7.5 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerAndClock" parent="MainCamera" instance=ExtResource( 11 )]
+margin_left = 278.0
+margin_top = 2.0
+margin_right = 318.0
+margin_bottom = 32.0
+
+[node name="Tween" type="Tween" parent="MainCamera"]
+
+[node name="ScoreBar" parent="MainCamera" instance=ExtResource( 17 )]
+
+[node name="NodeAnchorPoints" type="Node2D" parent="."]
+position = Vector2( -0.314941, 0 )
+
+[node name="StorageAnchor" type="Position2D" parent="NodeAnchorPoints"]
+position = Vector2( -160, 90 )
+
+[node name="BlenderAnchor" type="Position2D" parent="NodeAnchorPoints"]
+
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
+root_node = NodePath("../Restaurant")
+anims/Floating = SubResource( 1 )
+
+[node name="Space" type="Sprite" parent="Background"]
+z_index = -100
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Restaurant" type="Sprite" parent="Background"]
+position = Vector2( 160, 50 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fire" type="Sprite" parent="Background/Restaurant"]
+position = Vector2( 96, 43.5 )
+texture = ExtResource( 7 )
+
+[node name="fire4" type="Sprite" parent="Background/Restaurant"]
+position = Vector2( 96, -43.5 )
+texture = ExtResource( 7 )
+flip_v = true
+
+[node name="fire3" type="Sprite" parent="Background/Restaurant"]
+position = Vector2( -96, -43.5 )
+texture = ExtResource( 7 )
+flip_h = true
+flip_v = true
+
+[node name="fire2" type="Sprite" parent="Background/Restaurant"]
+position = Vector2( -96, 43.5 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="ParkingArea" parent="." instance=ExtResource( 10 )]
+position = Vector2( 70, 135 )
+scale = Vector2( 1, 1 )
+
+[node name="ShopTab" parent="." instance=ExtResource( 14 )]
+margin_left = 10.0
+margin_top = 190.0
+margin_right = 310.0
+margin_bottom = 350.0
+
+[node name="CombinationTable" parent="." instance=ExtResource( 15 )]
+margin_left = 10.0
+margin_top = -170.0
+margin_right = 310.0
+margin_bottom = -10.0
+
+[node name="StoragePanel" parent="." instance=ExtResource( 1 )]
+margin_left = 330.0
+margin_top = 10.0
+margin_right = 630.0
+margin_bottom = 170.0
+
+[node name="BlenderTab" parent="." instance=ExtResource( 6 )]
+margin_left = -310.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = 170.0
+
+[node name="NinePatchRect" parent="." instance=ExtResource( 18 )]
+margin_left = 410.0
+margin_top = 210.0
+margin_right = 710.0
+margin_bottom = 370.0
+
+[connection signal="pressed" from="MainCamera/Control/Down" to="MainCamera" method="_on_Down_pressed"]
+[connection signal="pressed" from="MainCamera/Control/Up" to="MainCamera" method="_on_Up_pressed"]
+[connection signal="pressed" from="MainCamera/Control/Left" to="MainCamera" method="_on_Left_pressed"]
+[connection signal="pressed" from="MainCamera/Control/Right" to="MainCamera" method="_on_Right_pressed"]
